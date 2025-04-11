@@ -1,0 +1,13 @@
+<%- include('../partials/header') %>
+
+<main class="main" id="main">
+    <div class="container">
+        <figure class="figure home-figure mx-auto">
+            <img src="<%= president.photo %>" alt="<%= president.title %>" class="img-fluid w-100">
+            <a href="/presidents/<%= president.id %> " class="president-link">view more</a>
+        </figure>
+    </div>
+</main>
+
+<%- include('../partials/footer') %>
+

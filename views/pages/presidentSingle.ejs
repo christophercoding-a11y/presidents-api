@@ -1,0 +1,39 @@
+<%- include('../partials/header') %>
+
+<main class="main" id="presidentSingleMain">
+    <div class="row">
+        <div class="col-7">
+            <img src="<%= data.photo %>" alt="data.title" class="img-fluid w-50">
+        </div>
+        <div class="col-5">
+            <nav class="navigation">
+                <ul class="pagination">
+                    <% if (data.id > 1) { %>
+                        <li class="page-item">
+                            <a href="/<%= path %>/<%= data.id - 1 %>" class="page-link text-dark">Previous</a>
+                        </li>
+                    <% } %>
+                    <% if (data.id < count) { %>
+                        <li class="page-item">
+                            <a href="/<%= path %>/<%= data.id + 1 %>" class="page-link text-dark">Next</a>
+
+                        </li>
+                    <% } %>
+                </ul>
+                <ul class="year-list list-group-flush">
+                    <li class="list-item">
+                        yearsInOffice: <%= data.yearsInOffice %>
+                    </li>
+                </ul>
+                <p class="card-text">Vice President(s)</p>
+                <ul class="list-unstyled vp-list">
+                    <% data.vicePresidents.forEach(item => { %>
+                        <li class="list-item"><%= item %></li>
+                    <% }) %>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</main>
+
+<%- include('../partials/footer') %>

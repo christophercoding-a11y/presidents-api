@@ -1,0 +1,25 @@
+<%- include('../partials/header') %>
+
+<main class="main" id="presidentMain">
+    <div class="container">
+        <div class="row  row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
+            <% data.forEach(president => { %>
+                <div class="col">
+                    <div class="card president-card h-100">
+                        <header class="card-header">
+                            <h2 class="card-title">
+                                <%= president.name %>
+                            </h2>
+                        </header>
+                        <img src="<%= president.photo %>" alt="<%= president.name%>" class="card-img-top img-fluid">
+                        <div class="card-footer">
+                            <a href="/<%= path %>/<%= president.id %>" class="card-footer link">view more</a>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</main>
+
+<%- include('../partials/footer') %>
