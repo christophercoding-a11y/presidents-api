@@ -14,7 +14,7 @@ router.get('/', (req, res)=> {
         randomPresident = resp.data[Math.floor(Math.random()* resp.data.length)]
         res.render('pages/home', {
             title: "President's Home page",
-            name: "President's Website",
+            name: " US President's Website",
             president: randomPresident
         })
     })

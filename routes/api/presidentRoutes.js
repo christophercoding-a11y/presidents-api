@@ -12,7 +12,7 @@ router.get('/', (req, res)=>{
     axios.get(url).then(response => {
         res.render('pages/presidents', {
             title: "President's",
-            name: "All President's",
+            name: "All US President's",
             data: response.data,
             path: 'president'
         })
@@ -31,7 +31,7 @@ router.get('/:id', (req, res)=> {
             title: data.title,
             name: data.name,
             data: data,
-            path: 'president',
+            path: 'presidents',
             count
         })
     })
