@@ -14,7 +14,7 @@ router.get('/', (req, res)=>{
             title: "President's",
             name: "All US President's",
             data: response.data,
-            path: 'president'
+            path: 'presidents'
         })
     })
 })
